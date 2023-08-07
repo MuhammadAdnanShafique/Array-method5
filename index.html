@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question5t</title>
+</head>
+<body>
+    <button onclick="b()">click</button>
+    <input type="number" id="inputNumber">
+    <h1 id="output">Enter any number for determines whether it's a prime number or not?</h1>
+    <script>
+        let element = document.getElementById('output')
+        function b() {
+            
+            let input = parseInt(document.getElementById('inputNumber').value);
+            let res = ' ';
+            for (let i = 2; i <=input; i++) {
+                document.getElementById('output').innerHTML=' ';
+            if(input % i ==0){
+                 res =`${input} is not a prime number`;
+                break;
+            }else{
+                 res= `${input} is a prime number`;
+            }
+        }element.innerHTML += res
+        }
+        
+      
+    </script>
+
+</body>
+</html>
+<!-- <script>
+    var number = prompt ("please enter a number");
+    if (number< 1){
+     console.log(`${number}is meither prime nor composite number`);
+    }else if (number < 1){
+     console.log(`$[number] is not a prime number`)
+    }else {
+     for (let i = 2; i < number; i++) {
+         if(number%i ==0){
+             var res = `${number} is not a prime number`;
+             break;
+         }else{
+             var res = `${number} is  a prime number`;
+         }
+     }
+     console.log(res);
+    }
+   
+ </script> -->
+
